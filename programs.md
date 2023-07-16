@@ -67,5 +67,92 @@ func main() {
 }
 
 ```
+Varible Scope
+--
+
+```
+package main
+
+import "fmt"
+
+//Global
+Val2 := 100
+
+//Package level -- (Camel Case)
+var myVal := 150 
+
+func main() {
+
+	// Local 	-- It will be inside the function always 
+
+
+	// Global	-- It will be present outside the function -- It must be Pascal Case that means Uppercase letter for 1st letter
+	// Upto package level in the program, Like it will accessable under the main package only for this example
+	// For any number of methods present under main package Global variable is accessable
+
+
+	// Package_Level  --   It will start with Camel case 1st letter lower and rest upper Ex: myVal
+	// This variable is accessable throught the program as well as other packages as well, In different package as
+	// it is accessable
+
+	
+	// Local varible
+	val1 := 55
+
+	fmt.Println(val)
+
+}
+```
+Shodowing.
+--
+```
+package main
+
+import "fmt"
+
+//Shadowing -- It is nothing but if we have same variable in local inside the func and outside the func, Then
+// It will use or print which is present inside the method variable only
+// Becoz val1 is near which is in method and global is outside the fucn, The prority will be to be inside method
+// variable only
+
+var val1 int = 100
+
+func main() {
+
+	val1 := 55
+
+	fmt.Println(val1)
+
+}
+```
+NOTE: When we are using global variable then we must use var keyword  
+var val1 int = 100 works
+val1 := 100 will not works here
+
+```
+package main
+
+import "fmt"
+
+//Shadowing -- It is nothing but if we have same variable in local inside the func and outside the func, Then
+// It will use or print which is present inside the method variable only
+// Becoz val1 is near which is in method and global is outside the fucn, The prority will be to be inside method
+// variable only
+
+// NOTE: When we are using global variable then we must use var keyword  
+// var val1 int = 100 works
+// val1 := 100 will not works here
+
+var val1 int = 100
+
+func main() {
+
+	val1 := 55
+
+	fmt.Println(val1)
+
+}
+
+```
 
 
